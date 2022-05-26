@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+     {% load static %}
+    <head>   
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+        <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+        <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
+        <!--Our Css-->
+    <link href='{% static "slotbooking/css/style.css"%}' rel="stylesheet"/>
+        <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  </head>
+    <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light my-navbar">
+    <!-- Container wrapper --> 
+    <div class="container-fluid">
+      <!-- Navbar brand -->
+      <h1>Mewar Bhumi Turf</h1>
+      </a>
+  
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarButtonsExample"
+        aria-controls="navbarButtonsExample"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" style="background-color: #fffdff;" id="navbarButtonsExample">
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+        <!-- Left links -->
+  
+        <div class="d-flex align-items-center">
+          <a type="button" class="guest-post-text px-3 me-2">
+            Contact
+          </a>
+          <a type="button" data-bs-toggle="modal" data-bs-target="#signinModal" style="color: #606c8b !important;" class="px-3 me-2">
+            Sign In
+          </a>
+          <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title" id="exampleModalLabel">Sign In</h2>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-6"><div class="row"><img src="./assets/signin-image.png"></div>
+                    <div class="row"><a href="#" style="text-align: center;"><u>Create an account</u></a></div></div>
+                    <div class="col-6">
+                      <div class="form-group row"><div class="col"><label><i class="fas fa-envelope"></i></label><input class="input-signup" type="email" placeholder="Your Email"></div></div>
+                      <div class="form-group row"><div class="col"><label><i class="fas fa-lock"></i></label><input class="input-signup" type="password" placeholder="Your Password"></div></div>
+                      <div class="form-group row"><div class="col"><input type="checkbox" class="form-check-label">Remember me</div></div>
+                      <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Log in
+                       </button>
+                       <!-- <div class="form-group row">Or Login with</div><div><i class="fab fa-facebook-square"></i><i class="fab fa-twitter-square"></i><i class="fab fa-google-plus-square"></i></div> -->
+                    </div>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal">
+ Sign Up
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">Sign up</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group row"><div class="col"><label><i class="fas fa-user"></i></label><input class="input-signup" type="text" placeholder="Your Name"></div></div>
+            <div class="form-group row"><div class="col"><label><i class="fas fa-envelope"></i></label><input class="input-signup" type="email" placeholder="Your Email"></div></div>
+            <div class="form-group row"><div class="col"><label><i class="fas fa-lock"></i></label><input class="input-signup" type="password" placeholder="Your Password"></div></div>
+            <div class="form-group row"><div class="col"><label><i class="fas fa-lock"></i></label><input class="input-signup" type="password" placeholder="Repeat Your Password"></div></div>
+            <div class="form-group row"><div class="col"><input type="checkbox" class="form-check-label">I agree all statements in <u><a href="#">Terms of service</a></u></div></div>
+            <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Register
+             </button>
+          </div>
+          <div class="col-6"><div class="row"><img src="./assets/signup-image.png"></div>
+          <div class="row"><a href="#" style="text-align: center;"><u>I am already member</u></a></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+         
+        </div>
+        
+      </div>
+      
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <div class="container-fluid">
+    <img src="https://cdn.wisden.com/wp-content/uploads/2021/01/GettyImages-468776434-e1610533327422-980x530.jpg" alt="" style="opacity: 0.75;" width="100%" height="636px" /> 
+        <div class="centered text-block" >
+           <div class=" d-flex justify-content-center vertical-center" style="text-align: center; margin-left:180px;"> 
+           <div class="row">
+            <div class="col-12">
+            <h2>Book Your Slot</h2>
+            </div>
+            <br/>
+            <br/>
+            <div class="col-12">
+            <button class="btn btn-success">Book Now</button>
+        </div> 
+        </div>
+        </div>
+        </div>
+  </div>
+  <!-- Footer -->
+<footer class="page-footer font-small blue">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="#">Mewar Bhumi Turf</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+  </body>
+  </html>
